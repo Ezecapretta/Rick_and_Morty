@@ -17,7 +17,7 @@ const reducer = (state = initialState, action) => {
                 myFavorites: state.myFavorites.filter(fav => fav.id !== Number(action.payload))
             }
         case 'FILTER':
-            const allCharactersFiltered = state.allCharactersFiltered.filter(char => char.gender === action.payload.gender)
+            const allCharactersFiltered = state.allCharacters.filter(char => char.gender === action.payload.gender)
             return {
                 ...state,
                 myFavorites: allCharactersFiltered
